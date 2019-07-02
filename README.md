@@ -1,6 +1,6 @@
 # Summary
-Senior Algorithms Engineer - coding challenge
-Created July 1, 2019
+- Senior Algorithms Engineer coding challenge
+- Created July 1, 2019
 
 # Java
 - There are 3 elevators in a 16-floor building
