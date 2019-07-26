@@ -1,0 +1,39 @@
+﻿In this project I have created the classes
+
+1. Building
+2. Elevator
+3. Floor(self explainatory)
+4. PassengerRequest(self explainatory).
+5. ElevatorScheduler.
+
+Building:
+	The instance of Building class will be created in Program.cs with specific number of floors and number of elevators.
+	This class has backgroud thread which will simulate the passengers requests from each floor to (random)destination floors.
+	This class exposes a public function to start the scheduling of elevators.
+
+ElevatorScheduler:
+	1. This class is responsible for scheduling of elevators.
+	2. There are two schedulers here
+		1. This scheduler will take the passenger requests and find the nearest elevator(by taking help elevator functions), and assign the request to that elevator.
+		2. This scheduler will take the passenger requests based on timestamp and find the nearest elevator(by taking help elevator functions), and assign the request to that elevator.Also exposes 
+			a function to output at point of time of tj what elevators are assigned to the requests.
+	3. This class also responsible for generating the random input of source and target floor based on timestamp formula (t_{j+1} = t_j - \ceil{8 ln(r)})
+
+Elevator:
+	1. This class consists of two backgroud threads to receive the requests and performing the requests.
+	2. Exposes the function to give distance to it and requesting floor.
+
+
+My comments of this assignment: 
+Actually I spent most of the time to search of thread safe priority queues, 
+but I did not find those.So I have used sortedSets and SortedDictionary to maintain simulation of elavator and implemented thread sychronization.
+
+
+
+
+
+
+
+
+
+
